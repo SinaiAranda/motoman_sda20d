@@ -1,0 +1,7 @@
+<launch>
+  <rosparam command="load" file="$(find motoman_sda20d_support)/config/sda20d_motion_interface.yaml" />
+
+  <include file="$(find motoman_driver)/launch/robot_multigroup_interface_streaming_dx100.launch">
+    <arg name="robot_ip"   value="192.168.255.10" />
+	</include>
+</launch>

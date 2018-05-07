@@ -1,0 +1,53 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"torso_link_b1" [label="torso_link_b1"];
+"arm_left_link_1_s" [label="arm_left_link_1_s"];
+"arm_left_link_2_l" [label="arm_left_link_2_l"];
+"arm_left_link_3_e" [label="arm_left_link_3_e"];
+"arm_left_link_4_u" [label="arm_left_link_4_u"];
+"arm_left_link_5_r" [label="arm_left_link_5_r"];
+"arm_left_link_6_b" [label="arm_left_link_6_b"];
+"arm_left_link_7_t" [label="arm_left_link_7_t"];
+"arm_right_link_1_s" [label="arm_right_link_1_s"];
+"arm_right_link_2_l" [label="arm_right_link_2_l"];
+"arm_right_link_3_e" [label="arm_right_link_3_e"];
+"arm_right_link_4_u" [label="arm_right_link_4_u"];
+"arm_right_link_5_r" [label="arm_right_link_5_r"];
+"arm_right_link_6_b" [label="arm_right_link_6_b"];
+"arm_right_link_7_t" [label="arm_right_link_7_t"];
+"torso_link_b2" [label="torso_link_b2"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "torso_joint_b1" [label="xyz: 0 0 0.2765 \nrpy: 0 -0 0"]
+"torso_joint_b1" -> "torso_link_b1"
+"torso_link_b1" -> "arm_left_joint_1_s" [label="xyz: 0.15 0.075 0.2984 \nrpy: 1.5708 -0 0"]
+"arm_left_joint_1_s" -> "arm_left_link_1_s"
+"arm_left_link_1_s" -> "arm_left_joint_2_l" [label="xyz: 0 -0.0571 -0.3145 \nrpy: 1.58618 1.5708 -3.12621"]
+"arm_left_joint_2_l" -> "arm_left_link_2_l"
+"arm_left_link_2_l" -> "arm_left_joint_3_e" [label="xyz: 0.2659 0 0.04877 \nrpy: 1.5708 -4.10207e-10 -1.5708"]
+"arm_left_joint_3_e" -> "arm_left_link_3_e"
+"arm_left_link_3_e" -> "arm_left_joint_4_u" [label="xyz: 0 0.0494 -0.2441 \nrpy: -1.58618 1.5708 3.12621"]
+"arm_left_joint_4_u" -> "arm_left_link_4_u"
+"arm_left_link_4_u" -> "arm_left_joint_5_r" [label="xyz: 0.26425 0 0.0015 \nrpy: -1.5708 5.55112e-17 1.5708"]
+"arm_left_joint_5_r" -> "arm_left_link_5_r"
+"arm_left_link_5_r" -> "arm_left_joint_6_b" [label="xyz: 0 0 -0.181 \nrpy: -3.27943e-15 1.5708 3.14159"]
+"arm_left_joint_6_b" -> "arm_left_link_6_b"
+"arm_left_link_6_b" -> "arm_left_joint_7_t" [label="xyz: 0.16725 0.02775 0 \nrpy: -3.27943e-15 1.5708 3.14159"]
+"arm_left_joint_7_t" -> "arm_left_link_7_t"
+"torso_link_b1" -> "arm_right_joint_1_s" [label="xyz: 0.15 -0.075 0.2984 \nrpy: 1.5708 -4.10207e-10 -3.14159"]
+"arm_right_joint_1_s" -> "arm_right_link_1_s"
+"arm_right_link_1_s" -> "arm_right_joint_2_l" [label="xyz: 0 -0.0571 -0.3145 \nrpy: 1.58618 1.5708 -3.12621"]
+"arm_right_joint_2_l" -> "arm_right_link_2_l"
+"arm_right_link_2_l" -> "arm_right_joint_3_e" [label="xyz: 0.2659 0 0.04877 \nrpy: 1.5708 5.55112e-17 -1.5708"]
+"arm_right_joint_3_e" -> "arm_right_link_3_e"
+"arm_right_link_3_e" -> "arm_right_joint_4_u" [label="xyz: 0 0.0494 -0.2441 \nrpy: -1.58618 1.5708 3.12621"]
+"arm_right_joint_4_u" -> "arm_right_link_4_u"
+"arm_right_link_4_u" -> "arm_right_joint_5_r" [label="xyz: 0.26425 0 0.0015 \nrpy: -1.5708 5.55112e-17 1.5708"]
+"arm_right_joint_5_r" -> "arm_right_link_5_r"
+"arm_right_link_5_r" -> "arm_right_joint_6_b" [label="xyz: 0 -0.03175 -0.181 \nrpy: -1.58618 1.5708 3.12621"]
+"arm_right_joint_6_b" -> "arm_right_link_6_b"
+"arm_right_link_6_b" -> "arm_right_joint_7_t" [label="xyz: 0.16725 0 -0.004 \nrpy: -1.5708 5.55112e-17 1.5708"]
+"arm_right_joint_7_t" -> "arm_right_link_7_t"
+"base_link" -> "torso_joint_b2" [label="xyz: 0 0 0.2765 \nrpy: 0 -0 0"]
+"torso_joint_b2" -> "torso_link_b2"
+}

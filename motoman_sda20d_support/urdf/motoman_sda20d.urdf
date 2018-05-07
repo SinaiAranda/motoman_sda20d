@@ -1,0 +1,924 @@
+<robot
+  name="motoman_sda20d">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.10775 -4.7555E-05 0.10955"
+        rpy="0 0 0" />
+      <mass
+        value="29.711" />
+      <inertia
+        ixx="0.37202"
+        ixy="-0.00060974"
+        ixz="-0.024001"
+        iyy="0.77862"
+        iyz="4.9206E-05"
+        izz="0.84078" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="torso_link_b1">
+    <inertial>
+      <origin
+        xyz="0.026706 1.1222E-05 0.19713"
+        rpy="0 0 0" />
+      <mass
+        value="36.439" />
+      <inertia
+        ixx="0.62924"
+        ixy="7.5604E-05"
+        ixz="-0.065715"
+        iyy="0.97273"
+        iyz="7.3187E-05"
+        izz="0.67513" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/torso_link_b1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/torso_link_b1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="torso_joint_b1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.2765"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="torso_link_b1" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="torso_link_b2">
+    <inertial>
+      <origin
+
+        xyz="0.026706 1.1222E-05 0.19713"
+
+        rpy="0 0 0" />
+      <mass
+
+        value="36.439" />
+      <inertia
+
+        ixx="0.62924"
+
+        ixy="7.5604E-05"
+
+        ixz="-0.065715"
+
+        iyy="0.97273"
+
+        iyz="7.3187E-05"
+
+        izz="0.67513" />
+    </inertial>
+    <visual>
+      <origin
+
+        xyz="0 0 0"
+
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+
+          filename="package://motoman_sda20d_support/meshes/torso_link_b1.STL" />
+      </geometry>
+      <material
+
+        name="">
+        <color
+
+          rgba="0.79216 0.81961 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+
+        xyz="0 0 0"
+
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/torso_link_b1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="torso_joint_b2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.2765"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="torso_link_b2" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+    <mimic joint="torso_joint_b1" multiplier="1" offset="0"/>
+  </joint>
+  <link
+    name="arm_left_link_1_s">
+    <inertial>
+      <origin
+        xyz="-4.4465E-06 0.014517 -0.19101"
+        rpy="0 0 0" />
+      <mass
+        value="12.738" />
+      <inertia
+        ixx="0.22105"
+        ixy="1.8397E-06"
+        ixz="-7.8564E-06"
+        iyy="0.22442"
+        iyz="0.016414"
+        izz="0.069643" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_1_s.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_1_s.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_left_joint_1_s"
+    type="revolute">
+    <origin
+      xyz="0.149999999999999 0.075 0.2984"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="torso_link_b1" />
+    <child
+      link="arm_left_link_1_s" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="arm_left_link_2_l">
+    <inertial>
+      <origin
+        xyz="0.099179 2.1877E-05 0.0070227"
+        rpy="0 0 0" />
+      <mass
+        value="6.6303" />
+      <inertia
+        ixx="0.034667"
+        ixy="-7.854E-06"
+        ixz="-0.0228"
+        iyy="0.089109"
+        iyz="-5.3344E-06"
+        izz="0.091218" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_2_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_2_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_left_joint_2_l"
+    type="revolute">
+    <origin
+      xyz="0 -0.0571 -0.3145"
+      rpy="-1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="arm_left_link_1_s" />
+    <child
+      link="arm_left_link_2_l" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="arm_left_link_3_e">
+    <inertial>
+      <origin
+        xyz="-2.2325E-06 -0.017232 -0.15134"
+        rpy="0 0 0" />
+      <mass
+        value="7.0076" />
+      <inertia
+        ixx="0.077721"
+        ixy="-1.9693E-08"
+        ixz="3.9327E-07"
+        iyy="0.075759"
+        iyz="-0.0060104"
+        izz="0.027096" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_3_e.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_3_e.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_left_joint_3_e"
+    type="revolute">
+    <origin
+      xyz="0.2659 0 0.0487700000000001"
+      rpy="-1.5707963267949 3.141592654 1.5707963267949" />
+    <parent
+      link="arm_left_link_2_l" />
+    <child
+      link="arm_left_link_3_e" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="arm_left_link_4_u">
+    <inertial>
+      <origin
+        xyz="0.084741 -1.2964E-05 -0.031047"
+        rpy="0 0 0" />
+      <mass
+        value="4.4681" />
+      <inertia
+        ixx="0.0122"
+        ixy="1.1308E-05"
+        ixz="-0.006865"
+        iyy="0.048201"
+        iyz="3.1167E-06"
+        izz="0.049778" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_4_u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_4_u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_left_joint_4_u"
+    type="revolute">
+    <origin
+      xyz="0 0.0494000000000001 -0.2441"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="arm_left_link_3_e" />
+    <child
+      link="arm_left_link_4_u" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="arm_left_link_5_r">
+    <inertial>
+      <origin
+        xyz="-2.7564E-06 0.019217 -0.11684"
+        rpy="0 0 0" />
+      <mass
+        value="2.5196" />
+      <inertia
+        ixx="0.015437"
+        ixy="2.7803E-08"
+        ixz="4.3281E-07"
+        iyy="0.015087"
+        iyz="0.0014717"
+        izz="0.0048607" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_5_r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_5_r.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_left_joint_5_r"
+    type="revolute">
+    <origin
+      xyz="0.26425 0 0.00150000000000017"
+      rpy="-1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="arm_left_link_4_u" />
+    <child
+      link="arm_left_link_5_r" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="arm_left_link_6_b">
+    <inertial>
+      <origin
+        xyz="0.06511 0.045218 5.3316E-05"
+        rpy="0 0 0" />
+      <mass
+        value="2.1679" />
+      <inertia
+        ixx="0.0044503"
+        ixy="0.0020665"
+        ixz="1.1542E-06"
+        iyy="0.010743"
+        iyz="6.4768E-07"
+        izz="0.010568" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_6_b.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_6_b.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_left_joint_6_b"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.181"
+      rpy="3.14159265358979 1.5707963267949 0" />
+    <parent
+      link="arm_left_link_5_r" />
+    <child
+      link="arm_left_link_6_b" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="arm_left_link_7_t">
+    <inertial>
+      <origin
+        xyz="2.14651900161539E-05 5.2991646903866E-08 -0.00782705372905079"
+        rpy="0 0 0" />
+      <mass
+        value="0.107191529942716" />
+      <inertia
+        ixx="6.53271234573758E-05"
+        ixy="-6.14986191809701E-07"
+        ixz="1.83404409289748E-08"
+        iyy="6.51521999984086E-05"
+        iyz="1.79250348726871E-11"
+        izz="0.000126203207989527" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_7_t.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_left_link_7_t.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_left_joint_7_t"
+    type="revolute">
+    <origin
+      xyz="0.16725 0.0277499999999999 0"
+      rpy="3.14159265358979 1.5707963267949 0" />
+    <parent
+      link="arm_left_link_6_b" />
+    <child
+      link="arm_left_link_7_t" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="arm_right_link_1_s">
+    <inertial>
+      <origin
+        xyz="-4.4467925373326E-06 0.0145169997471059 -0.191014036213653"
+        rpy="0 0 0" />
+      <mass
+        value="12.7382287673505" />
+      <inertia
+        ixx="0.22105090709977"
+        ixy="1.83944998989813E-06"
+        ixz="-7.85642966984562E-06"
+        iyy="0.224419543541867"
+        iyz="0.0164140835995225"
+        izz="0.0696434886719727" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_1_s.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_1_s.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_right_joint_1_s"
+    type="revolute">
+    <origin
+      xyz="0.15 -0.075 0.2984"
+      rpy="-1.5707963267949 3.141592654 0" />
+    <parent
+      link="torso_link_b1" />
+    <child
+      link="arm_right_link_1_s" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="arm_right_link_2_l">
+    <inertial>
+      <origin
+        xyz="0.099179 2.1879E-05 0.0070227"
+        rpy="0 0 0" />
+      <mass
+        value="6.6303" />
+      <inertia
+        ixx="0.034667"
+        ixy="-7.8564E-06"
+        ixz="-0.0228"
+        iyy="0.089109"
+        iyz="-5.3352E-06"
+        izz="0.091218" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_2_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_2_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_right_joint_2_l"
+    type="revolute">
+    <origin
+      xyz="0 -0.0571 -0.3145"
+      rpy="-1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="arm_right_link_1_s" />
+    <child
+      link="arm_right_link_2_l" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="arm_right_link_3_e">
+    <inertial>
+      <origin
+        xyz="-2.2337E-06 -0.017232 -0.15134"
+        rpy="0 0 0" />
+      <mass
+        value="7.0076" />
+      <inertia
+        ixx="0.077721"
+        ixy="-1.9006E-08"
+        ixz="3.9363E-07"
+        iyy="0.075759"
+        iyz="-0.0060104"
+        izz="0.027096" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_3_e.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_3_e.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_right_joint_3_e"
+    type="revolute">
+    <origin
+      xyz="0.2659 0 0.04877"
+      rpy="1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="arm_right_link_2_l" />
+    <child
+      link="arm_right_link_3_e" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="arm_right_link_4_u">
+    <inertial>
+      <origin
+        xyz="0.084741 -1.2965E-05 -0.031047"
+        rpy="0 0 0" />
+      <mass
+        value="4.4681" />
+      <inertia
+        ixx="0.0122"
+        ixy="1.1308E-05"
+        ixz="-0.006865"
+        iyy="0.048201"
+        iyz="3.1168E-06"
+        izz="0.049778" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_4_u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_4_u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_right_joint_4_u"
+    type="revolute">
+    <origin
+      xyz="0 0.0494 -0.2441"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="arm_right_link_3_e" />
+    <child
+      link="arm_right_link_4_u" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="arm_right_link_5_r">
+    <inertial>
+      <origin
+        xyz="-2.75635516211459E-06 0.0192169669460178 -0.116837512354688"
+        rpy="0 0 0" />
+      <mass
+        value="2.51962025325968" />
+      <inertia
+        ixx="0.0154365373372443"
+        ixy="2.78033455944647E-08"
+        ixz="4.32809858861873E-07"
+        iyy="0.015086966417095"
+        iyz="0.00147166738190943"
+        izz="0.00486066933215364" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_5_r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_5_r.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_right_joint_5_r"
+    type="revolute">
+    <origin
+      xyz="0.26425 0 0.0015"
+      rpy="-1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="arm_right_link_4_u" />
+    <child
+      link="arm_right_link_5_r" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="arm_right_link_6_b">
+    <inertial>
+      <origin
+        xyz="0.06511 -5.3316E-05 0.013468"
+        rpy="0 0 0" />
+      <mass
+        value="2.1679" />
+      <inertia
+        ixx="0.0044503"
+        ixy="-1.1542E-06"
+        ixz="0.0020665"
+        iyy="0.010568"
+        iyz="-6.4768E-07"
+        izz="0.010743" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_6_b.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_6_b.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_right_joint_6_b"
+    type="revolute">
+    <origin
+      xyz="0 -0.0317499999999999 -0.181"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="arm_right_link_5_r" />
+    <child
+      link="arm_right_link_6_b" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="arm_right_link_7_t">
+    <inertial>
+      <origin
+        xyz="2.1465E-05 5.2992E-08 -0.0078271"
+        rpy="0 0 0" />
+      <mass
+        value="0.10719" />
+      <inertia
+        ixx="6.5327E-05"
+        ixy="-6.1499E-07"
+        ixz="1.834E-08"
+        iyy="6.5152E-05"
+        iyz="1.7925E-11"
+        izz="0.0001262" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_7_t.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/arm_right_link_7_t.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_right_joint_7_t"
+    type="revolute">
+    <origin
+      xyz="0.16725 0 -0.004"
+      rpy="-1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="arm_right_link_6_b" />
+    <child
+      link="arm_right_link_7_t" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+</robot>
