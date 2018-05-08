@@ -1,6 +1,0 @@
-<package>
-  <description brief="motoman_sda20d">sda20d</description>
-  <depend package="gazebo" />
-  <author>me</author>
-  <license>BSD</license>
-</package>
