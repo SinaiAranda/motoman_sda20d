@@ -110,8 +110,6 @@ torso:
     - TRRTkConfigDefault
     - PRMkConfigDefault
     - PRMstarkConfigDefault
-  projection_evaluator: joints(torso_joint_b1,torso_joint_b2)
-  longest_valid_segment_fraction: 0.05
 sda20d:
   planner_configs:
     - SBLkConfigDefault

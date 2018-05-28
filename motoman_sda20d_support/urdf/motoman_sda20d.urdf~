@@ -523,7 +523,7 @@
     <child
       link="arm_right_link_1_s" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
   </joint>
   <link
