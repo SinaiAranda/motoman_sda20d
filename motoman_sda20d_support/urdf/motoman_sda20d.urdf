@@ -92,7 +92,7 @@
       link="torso_link_b1" />
     <axis
       xyz="0 0 1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+    <limit effort="0" lower="-1.5555423498153687" upper="1.5555423498153687" velocity="2.4434"/>
   </joint>
   <link
     name="arm_left_link_1_s">
@@ -145,8 +145,8 @@
     <child
       link="arm_left_link_1_s" />
     <axis
-      xyz="0 0 1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+      xyz="0 0 -1" />
+    <limit effort="0" lower="-3.1400246620178223" upper="3.1400246620178223" velocity="0.9076052904129028"/>
   </joint>
   <link
     name="arm_left_link_2_l">
@@ -199,8 +199,8 @@
     <child
       link="arm_left_link_2_l" />
     <axis
-      xyz="0 0 1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+      xyz="0 0 -1" />
+    <limit effort="0" lower="-1.9198451042175293" upper="1.9198451042175293" velocity="0.7968177795410156"/>
   </joint>
   <link
     name="arm_left_link_3_e">
@@ -254,7 +254,7 @@
       link="arm_left_link_3_e" />
     <axis
       xyz="0 0 -1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+    <limit effort="0" lower="-2.966156244277954" upper="2.966156244277954" velocity="1.0396981239318848"/>
   </joint>
   <link
     name="arm_left_link_4_u">
@@ -307,8 +307,8 @@
     <child
       link="arm_left_link_4_u" />
     <axis
-      xyz="0 0 1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+      xyz="0 0 -1" />
+    <limit effort="0" lower="-2.268928050994873" upper="2.268928050994873" velocity="1.1888351440429688"/>
   </joint>
   <link
     name="arm_left_link_5_r">
@@ -361,8 +361,8 @@
     <child
       link="arm_left_link_5_r" />
     <axis
-      xyz="0 0 -1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+      xyz="0 0 1" />
+    <limit effort="0" lower="-3.140711545944214" upper="3.140711545944214" velocity="1.5719505548477173"/>
   </joint>
   <link
     name="arm_left_link_6_b">
@@ -415,8 +415,8 @@
     <child
       link="arm_left_link_6_b" />
     <axis
-      xyz="0 1 0" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+      xyz="0 -1 0" />
+    <limit effort="0" lower="-1.9177645444869995" upper="1.9177645444869995" velocity="1.7428147792816162"/>
   </joint>
   <link
     name="arm_left_link_7_t">
@@ -469,8 +469,8 @@
     <child
       link="arm_left_link_7_t" />
     <axis
-      xyz="0 0 -1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+      xyz="0 0 1" />
+    <limit effort="0" lower="-3.1383140087127686" upper="3.1383140087127686" velocity="2.0453076362609863"/>
   </joint>
   <link
     name="arm_right_link_1_s">
@@ -524,7 +524,7 @@
       link="arm_right_link_1_s" />
     <axis
       xyz="0 0 1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+    <limit effort="0" lower="-3.1400246620178223" upper="3.1400246620178223" velocity="0.9076052904129028"/>
   </joint>
   <link
     name="arm_right_link_2_l">
@@ -578,7 +578,7 @@
       link="arm_right_link_2_l" />
     <axis
       xyz="0 0 1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+    <limit effort="0" lower="-1.9191462993621826" upper="1.9191462993621826" velocity="0.7968177795410156"/>
   </joint>
   <link
     name="arm_right_link_3_e">
@@ -632,7 +632,7 @@
       link="arm_right_link_3_e" />
     <axis
       xyz="0 0 1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+    <limit effort="0" lower="-2.9661734104156494" upper="2.9661734104156494" velocity="1.0396981239318848"/>
   </joint>
   <link
     name="arm_right_link_4_u">
@@ -686,7 +686,7 @@
       link="arm_right_link_4_u" />
     <axis
       xyz="0 0 1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+    <limit effort="0" lower="-2.2681779861450195" upper="2.2681779861450195" velocity="1.1888351440429688"/>
   </joint>
   <link
     name="arm_right_link_5_r">
@@ -740,7 +740,7 @@
       link="arm_right_link_5_r" />
     <axis
       xyz="0 0 -1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+    <limit effort="0" lower="-3.140711545944214" upper="3.140711545944214" velocity="1.5719505548477173"/>
   </joint>
   <link
     name="arm_right_link_6_b">
@@ -794,7 +794,7 @@
       link="arm_right_link_6_b" />
     <axis
       xyz="0 0 1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+    <limit effort="0" lower="-1.9177796840667725" upper="1.9177796840667725" velocity="1.7428147792816162"/>
   </joint>
   <link
     name="arm_right_link_7_t">
@@ -848,6 +848,6 @@
       link="arm_right_link_7_t" />
     <axis
       xyz="0 0 -1" />
-    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+    <limit effort="0" lower="-3.1383140087127686" upper="3.1383140087127686" velocity="2.0453076362609863"/>
   </joint>
 </robot>
