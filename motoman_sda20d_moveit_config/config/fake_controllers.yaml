@@ -1,14 +1,5 @@
 controller_list:
-  - name: fake_arm_right_controller
-    joints:
-      - arm_right_joint_1_s
-      - arm_right_joint_2_l
-      - arm_right_joint_3_e
-      - arm_right_joint_4_u
-      - arm_right_joint_5_r
-      - arm_right_joint_6_b
-      - arm_right_joint_7_t
-  - name: fake_arm_left_controller
+  - name: fake_R1_controller
     joints:
       - arm_left_joint_1_s
       - arm_left_joint_2_l
@@ -17,15 +8,8 @@ controller_list:
       - arm_left_joint_5_r
       - arm_left_joint_6_b
       - arm_left_joint_7_t
-  - name: fake_arms_controller
+  - name: fake_R2_controller
     joints:
-      - arm_left_joint_1_s
-      - arm_left_joint_2_l
-      - arm_left_joint_3_e
-      - arm_left_joint_4_u
-      - arm_left_joint_5_r
-      - arm_left_joint_6_b
-      - arm_left_joint_7_t
       - arm_right_joint_1_s
       - arm_right_joint_2_l
       - arm_right_joint_3_e
@@ -33,10 +17,46 @@ controller_list:
       - arm_right_joint_5_r
       - arm_right_joint_6_b
       - arm_right_joint_7_t
-  - name: fake_torso_controller
+  - name: fake_B1_controller
     joints:
       - torso_joint_b1
-  - name: fake_sda20d_controller
+  - name: fake_R1R2_controller
+    joints:
+      - arm_left_joint_1_s
+      - arm_left_joint_2_l
+      - arm_left_joint_3_e
+      - arm_left_joint_4_u
+      - arm_left_joint_5_r
+      - arm_left_joint_6_b
+      - arm_left_joint_7_t
+      - arm_right_joint_1_s
+      - arm_right_joint_2_l
+      - arm_right_joint_3_e
+      - arm_right_joint_4_u
+      - arm_right_joint_5_r
+      - arm_right_joint_6_b
+      - arm_right_joint_7_t
+  - name: fake_R1B1_controller
+    joints:
+      - torso_joint_b1
+      - arm_left_joint_1_s
+      - arm_left_joint_2_l
+      - arm_left_joint_3_e
+      - arm_left_joint_4_u
+      - arm_left_joint_5_r
+      - arm_left_joint_6_b
+      - arm_left_joint_7_t
+  - name: fake_R2B1_controller
+    joints:
+      - torso_joint_b1
+      - arm_right_joint_1_s
+      - arm_right_joint_2_l
+      - arm_right_joint_3_e
+      - arm_right_joint_4_u
+      - arm_right_joint_5_r
+      - arm_right_joint_6_b
+      - arm_right_joint_7_t
+  - name: fake_R1R2B1_controller
     joints:
       - torso_joint_b1
       - arm_left_joint_1_s

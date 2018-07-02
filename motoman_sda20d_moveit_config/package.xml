@@ -5,8 +5,8 @@
   <description>
      An automatically generated package with all the configuration and launch files for using the motoman_sda20d with the MoveIt! Motion Planning Framework
   </description>
-  <author email="sinaivoz@gmail.com">SINAI ARANDA MIRAMONTES</author>
-  <maintainer email="sinaivoz@gmail.com">SINAI ARANDA MIRAMONTES</maintainer>
+  <author email="sinaivoz@gmail.com">SInai Aranda Miramontes</author>
+  <maintainer email="sinaivoz@gmail.com">SInai Aranda Miramontes</maintainer>
 
   <license>BSD</license>
 
@@ -17,12 +17,15 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <run_depend>moveit_ros_move_group</run_depend>
+  <run_depend>moveit_fake_controller_manager</run_depend>
   <run_depend>moveit_kinematics</run_depend>
   <run_depend>moveit_planners_ompl</run_depend>
   <run_depend>moveit_ros_visualization</run_depend>
   <run_depend>joint_state_publisher</run_depend>
   <run_depend>robot_state_publisher</run_depend>
   <run_depend>xacro</run_depend>
+  <!-- This package is referenced in the warehouse launch files, but does not build out of the box at the moment. Commented the dependency until this works. -->
+  <!-- <run_depend>warehouse_ros_mongo</run_depend> -->
   <build_depend>motoman_sda20d_support</build_depend>
   <run_depend>motoman_sda20d_support</run_depend>
 

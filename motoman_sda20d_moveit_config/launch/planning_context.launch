@@ -10,7 +10,7 @@
 
   <!-- The semantic description that corresponds to the URDF -->
   <param name="$(arg robot_description)_semantic" textfile="$(find motoman_sda20d_moveit_config)/config/motoman_sda20d.srdf" />
-  
+
   <!-- Load updated joint limits (override information from URDF) -->
   <group ns="$(arg robot_description)_planning">
     <rosparam command="load" file="$(find motoman_sda20d_moveit_config)/config/joint_limits.yaml"/>
@@ -20,5 +20,5 @@
   <group ns="$(arg robot_description)_kinematics">
     <rosparam command="load" file="$(find motoman_sda20d_moveit_config)/config/kinematics.yaml"/>
   </group>
-  
+
 </launch>
