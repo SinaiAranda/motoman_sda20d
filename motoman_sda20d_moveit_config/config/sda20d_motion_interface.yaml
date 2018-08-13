@@ -1,0 +1,13 @@
+topic_list:
+    - name: sda20d_r1_controller
+      ns: sda20d
+      group: 0
+      joints: ['arm_left_joint_s','arm_left_joint_l','arm_left_joint_e','arm_left_joint_u','arm_left_joint_r','arm_left_joint_b','arm_left_joint_t']
+    - name: sda20d_r2_controller
+      ns: sda20d
+      group: 1
+      joints: ['arm_right_joint_s','arm_right_joint_l','arm_right_joint_e','arm_right_joint_u','arm_right_joint_r','arm_right_joint_b','arm_right_joint_t']
+    - name: sda20d_b1_controller
+      ns: sda20d
+      group: 2
+      joints: ['torso_joint_b1']

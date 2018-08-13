@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="motoman_sda20d">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://motoman_sda20d_support/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81 0.93 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://motoman_sda20d_support/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="torso_link_b1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://motoman_sda20d_support/meshes/torso_link_b1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79 0.81 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://motoman_sda20d_support/meshes/torso_link_b1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="torso_joint_b1" type="revolute">
+    <origin xyz="0 0 0.2765" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="torso_link_b1" />
+    <axis xyz="0 0 1" />
+    <limit effort="1000" lower="-1.5555423498153687" upper="1.5555423498153687" velocity="2.4434"/>
+  </joint>
+
+  <xacro:macro name="motoman_arm_link" params="side link_name rgba parent xyz rpy axis lower upper velocity reflect" >
+  <link name="arm_${side}_link_${link_name}">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://motoman_sda20d_support/meshes/arm_link_${link_name}.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="${rgba}" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://motoman_sda20d_support/meshes/arm_link_${link_name}.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="arm_${side}_joint_${link_name}" type="revolute">
+    <origin xyz="${xyz}" rpy="${rpy}" />
+    <parent link="${parent}" />
+    <child link="arm_${side}_link_${link_name}" />
+    <axis xyz="${axis}" />
+    <limit effort="1000" lower="${lower}" upper="${upper}" velocity="${velocity}"/>
+  </joint>
+  </xacro:macro>
+
+  <xacro:macro name="motoman_arm_side" params="side">
+  <xacro:if value="${side=='left'}">
+  <xacro:property name="reflect" value="1"/>
+  </xacro:if>
+  <xacro:unless value="${side=='left'}">
+  <xacro:property name="reflect" value="-1"/>
+  </xacro:unless>
+  <xacro:motoman_arm_link side="${side}" link_name="s" rgba="0.79 0.81 0.93 1" parent="torso_link_b1" xyz="0.15 ${0.075 * reflect} 0.2984" rpy="${pi/2* reflect} ${(pi/2 * (reflect - 1)) * -1} 0" axis="0 0 ${reflect * -1}" lower="-3.14" upper="3.14" velocity="0.9086" reflect="${reflect}"/>
+  <xacro:motoman_arm_link side="${side}" link_name="l" rgba="0.79 0.81 1 1" parent="arm_${side}_link_s" xyz="0 -0.0571 -0.3145" rpy="-${pi/2} ${pi/2} 0" axis="0 0 ${reflect * -1}" lower="-1.92" upper="1.92" velocity="0.796" reflect="${reflect}"/>
+  <xacro:motoman_arm_link side="${side}" link_name="e" rgba="0.79 0.81 0.93 1" parent="arm_${side}_link_l" xyz="0.2659 0 0.04877" rpy="-${pi/2} ${pi} ${pi/2}" axis="0 0 ${reflect * -1}" lower="-2.966" upper="2.966" velocity="1.039" reflect="${reflect}"/>
+  <xacro:motoman_arm_link side="${side}" link_name="u" rgba="0.79 0.81 1 1" parent="arm_${side}_link_e" xyz="0 0.0494 -0.2441" rpy="${pi/2} ${pi/2} 0" axis="0 0 ${reflect * -1}" lower="-2.2689" upper="2.2689" velocity="1.188" reflect="${reflect}"/>
+  <xacro:motoman_arm_link side="${side}" link_name="r" rgba="0.79 0.81 0.93 1" parent="arm_${side}_link_u" xyz="0.26425 0 0.0015" rpy="-${pi/2} 0 ${pi/2}" axis="0 0 ${reflect * 1}" lower="-3.14" upper="3.14" velocity="1.5719" reflect="${reflect}"/>
+  <xacro:motoman_arm_link side="${side}" link_name="b" rgba="0.79 0.81 1 1" parent="arm_${side}_link_r" xyz="0 0 -0.181" rpy="${pi} ${pi/2} 0" axis="0 ${reflect * -1} 0" lower="-1.917" upper="1.917" velocity="1.74" reflect="${reflect}"/>
+  <xacro:motoman_arm_link side="${side}" link_name="t" rgba="0.79 0.81 0.93 1" parent="arm_${side}_link_b" xyz="0.16725 0.02775 0" rpy="${pi} ${pi/2} 0" axis="0 0 ${reflect * 1}" lower="-3.1383" upper="3.1383" velocity="2.0453" reflect="${reflect}"/>
+  </xacro:macro>
+
+  <xacro:motoman_arm_side side="left"/>
+  <xacro:motoman_arm_side side="right"/>
+
+</robot>

@@ -1,0 +1,4 @@
+controller_joint_names: ['arm_left_joint_s','arm_left_joint_l','arm_left_joint_e'
+,'arm_left_joint_u','arm_left_joint_r','arm_left_joint_b','arm_left_joint_t',
+'arm_right_joint_s','arm_right_joint_l','arm_right_joint_e','arm_right_joint_u',
+'arm_right_joint_r','arm_right_joint_b','arm_right_joint_t','torso_joint_b1']
