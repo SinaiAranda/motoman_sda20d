@@ -1,0 +1,19 @@
+<launch>
+  <param
+    name="robot_description"
+    textfile="$(find robotiq_gripper_3_finger_adaptive_support)/urdf/left_robotiq_gripper_3_finger_adaptive.urdf" />
+  <param name="robot_description" command="$(find xacro)/xacro '$(find robotiq_gripper_3_finger_adaptive_support)/urdf/left_robotiq_gripper_3_finger_adaptive.xacro'" />
+  <param
+    name="use_gui"
+    value="true" />
+  <node
+    name="left_robotiq_gripper_3_finger_adaptive_state"
+    pkg="robotiq_gripper_3_finger_adaptive_support"
+    type="left_robotiq_gripper_3_finger_adaptive_state" />
+  <!--
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="state_publisher" />-->
+  <node	name="rviz" pkg="rviz" type="rviz" args="-d $(find robotiq_gripper_3_finger_adaptive_support)/urdf.rviz"/>
+</launch>

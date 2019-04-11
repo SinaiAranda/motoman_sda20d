@@ -1,0 +1,101 @@
+controller_list:
+  - name: fake_R1_controller
+    joints:
+      - arm_left_joint_1_s
+      - arm_left_joint_2_l
+      - arm_left_joint_3_e
+      - arm_left_joint_4_u
+      - arm_left_joint_5_r
+      - arm_left_joint_6_b
+      - arm_left_joint_7_t
+  - name: fake_R2_controller
+    joints:
+      - arm_right_joint_1_s
+      - arm_right_joint_2_l
+      - arm_right_joint_3_e
+      - arm_right_joint_4_u
+      - arm_right_joint_5_r
+      - arm_right_joint_6_b
+      - arm_right_joint_7_t
+  - name: fake_left_gripper_controller
+    joints:
+      - left_gripper_finger_joint_a_1
+      - left_gripper_finger_joint_a_2
+      - left_gripper_finger_joint_a_3
+      - left_gripper_finger_joint_a_4
+      - left_gripper_finger_joint_b_1
+      - left_gripper_finger_joint_b_2
+      - left_gripper_finger_joint_b_3
+      - left_gripper_finger_joint_b_4
+      - left_gripper_finger_joint_c_2
+      - left_gripper_finger_joint_c_3
+      - left_gripper_finger_joint_c_4
+  - name: fake_right_gripper_controller
+    joints:
+      - right_gripper_finger_joint_a_1
+      - right_gripper_finger_joint_a_2
+      - right_gripper_finger_joint_a_3
+      - right_gripper_finger_joint_a_4
+      - right_gripper_finger_joint_b_1
+      - right_gripper_finger_joint_b_2
+      - right_gripper_finger_joint_b_3
+      - right_gripper_finger_joint_b_4
+      - right_gripper_finger_joint_c_2
+      - right_gripper_finger_joint_c_3
+      - right_gripper_finger_joint_c_4
+  - name: fake_B1_controller
+    joints:
+      - torso_joint_b1
+  - name: fake_R1R2_controller
+    joints:
+      - arm_left_joint_1_s
+      - arm_left_joint_2_l
+      - arm_left_joint_3_e
+      - arm_left_joint_4_u
+      - arm_left_joint_5_r
+      - arm_left_joint_6_b
+      - arm_left_joint_7_t
+      - arm_right_joint_1_s
+      - arm_right_joint_2_l
+      - arm_right_joint_3_e
+      - arm_right_joint_4_u
+      - arm_right_joint_5_r
+      - arm_right_joint_6_b
+      - arm_right_joint_7_t
+  - name: fake_R1B1_controller
+    joints:
+      - torso_joint_b1
+      - arm_left_joint_1_s
+      - arm_left_joint_2_l
+      - arm_left_joint_3_e
+      - arm_left_joint_4_u
+      - arm_left_joint_5_r
+      - arm_left_joint_6_b
+      - arm_left_joint_7_t
+  - name: fake_R2B1_controller
+    joints:
+      - torso_joint_b1
+      - arm_right_joint_1_s
+      - arm_right_joint_2_l
+      - arm_right_joint_3_e
+      - arm_right_joint_4_u
+      - arm_right_joint_5_r
+      - arm_right_joint_6_b
+      - arm_right_joint_7_t
+  - name: fake_R1R2B1_controller
+    joints:
+      - torso_joint_b1
+      - arm_left_joint_1_s
+      - arm_left_joint_2_l
+      - arm_left_joint_3_e
+      - arm_left_joint_4_u
+      - arm_left_joint_5_r
+      - arm_left_joint_6_b
+      - arm_left_joint_7_t
+      - arm_right_joint_1_s
+      - arm_right_joint_2_l
+      - arm_right_joint_3_e
+      - arm_right_joint_4_u
+      - arm_right_joint_5_r
+      - arm_right_joint_6_b
+      - arm_right_joint_7_t

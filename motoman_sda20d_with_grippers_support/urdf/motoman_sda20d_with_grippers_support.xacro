@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="motoman_sda20d_with_grippers_support">
+ <xacro:include filename="$(find motoman_sda20d_support)/urdf/motoman_sda20d.xacro" />
+ <xacro:include filename="$(find robotiq_gripper_3_finger_adaptive_support)/urdf/left_robotiq_gripper_3_finger_adaptive.xacro"/>
+  <joint name="arm_left_to_gripper" type="fixed">
+  <origin xyz="0 0 -0.015" rpy="0 ${pi} -${pi/2}" />
+  <parent link="arm_left_link_7_t" />
+  <child link="left_gripper_base_link" />
+  </joint>
+ <xacro:include filename="$(find robotiq_gripper_3_finger_adaptive_support)/urdf/right_robotiq_gripper_3_finger_adaptive.xacro"/>
+  <joint name="arm_right_to_gripper" type="fixed">
+  <origin xyz="0 0 -0.015" rpy="0 ${pi} -${pi/2}" />
+  <parent link="arm_right_link_7_t" />
+  <child link="right_gripper_base_link" />
+  </joint>
+  <link name="left_link_endpoint">
+  </link>
+  <joint name="left_joint_endpoint" type="fixed">
+    <origin rpy="3.14159265358979 0 1.5707963267949" xyz="0.0 0.0 0.27"/>
+    <parent link="left_gripper_base_link"/>
+    <child link="left_link_endpoint"/>
+  </joint>
+  <link name="right_link_endpoint">
+  </link>
+  <joint name="right_joint_endpoint" type="fixed">
+    <origin rpy="3.14159265358979 0 1.5707963267949" xyz="0.0 0.0 0.27"/>
+    <parent link="right_gripper_base_link"/>
+    <child link="right_link_endpoint"/>
+  </joint>
+</robot>

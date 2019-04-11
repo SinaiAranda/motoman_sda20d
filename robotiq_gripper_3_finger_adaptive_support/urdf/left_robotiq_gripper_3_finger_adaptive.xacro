@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="left_robotiq_gripper_3_finger_adaptive">
+  <link name="left_gripper_base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robotiq_gripper_3_finger_adaptive_support/meshes/gripper_base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.10196 0.10196 0.10196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robotiq_gripper_3_finger_adaptive_support/meshes/gripper_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <xacro:macro name="left_gripper_finger_link" params="finger_name link_name type xyz rpy parent axis lower upper" >
+  <link name="left_gripper_finger_link_${finger_name}_${link_name}">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robotiq_gripper_3_finger_adaptive_support/meshes/gripper_finger_link_${link_name}.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.10196 0.10196 0.10196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robotiq_gripper_3_finger_adaptive_support/meshes/gripper_finger_link_${link_name}.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_gripper_finger_joint_${finger_name}_${link_name}" type="${type}">
+    <origin xyz="${xyz}" rpy="${rpy}" />
+    <parent link="${parent}" />
+    <child link="left_gripper_finger_link_${finger_name}_${link_name}" />
+    <axis xyz="${axis}" />
+    <limit lower="${lower}" upper="${upper}" effort="1000"
+      velocity="${upper}" />
+  </joint>
+  </xacro:macro>
+
+  <xacro:left_gripper_finger_link finger_name="a" link_name="1" type="revolute" xyz="0.044008 -0.054539 0.13897" rpy="${pi/2} 0.0079495 -3.0107" parent="left_gripper_base_link" axis="0 0 -1" lower="-0.1755" upper="0.1744"/>
+  <xacro:left_gripper_finger_link finger_name="a" link_name="2" type="revolute" xyz="0.011219 0.021604 0.014288" rpy="${pi} -${pi/2} ${pi}" parent="left_gripper_finger_link_a_1" axis="0 0 -1" lower="0" upper="1.4801"/>
+  <xacro:left_gripper_finger_link finger_name="a" link_name="3" type="revolute" xyz="-0.03278 0.046815 -0.0007872" rpy="0 0 -0.05236" parent="left_gripper_finger_link_a_2" axis="0 0 -1" lower="0" upper="1.2322"/>
+  <xacro:left_gripper_finger_link finger_name="a" link_name="4" type="revolute" xyz="-0.021853 0.03121 1.28E-05" rpy="0 0 0.05236" parent="left_gripper_finger_link_a_3" axis="0 0 -1" lower="-1.27" upper="0.6757"/>
+
+  <xacro:left_gripper_finger_link finger_name="b" link_name="1" type="revolute" xyz="-0.028392 -0.064071 0.13897" rpy="${pi/2} 0.0079495 -3.0107" parent="left_gripper_base_link" axis="0 0 1" lower="-0.1755" upper="0.1744"/>
+  <xacro:left_gripper_finger_link finger_name="b" link_name="2" type="revolute" xyz="0.011219 0.021604 0.014288" rpy="${pi} -${pi/2} ${pi}" parent="left_gripper_finger_link_b_1" axis="0 0 -1" lower="0" upper="1.4801"/>
+  <xacro:left_gripper_finger_link finger_name="b" link_name="3" type="revolute" xyz="-0.03278 0.046815 -0.0007872" rpy="0 0 -0.05236" parent="left_gripper_finger_link_b_2" axis="0 0 -1" lower="0" upper="1.2322"/>
+  <xacro:left_gripper_finger_link finger_name="b" link_name="4" type="revolute" xyz="-0.021853 0.03121 1.28E-05" rpy="0 0 0.05236" parent="left_gripper_finger_link_b_3" axis="0 0 -1" lower="-1.27" upper="0.6757"/>
+
+  <xacro:left_gripper_finger_link finger_name="c" link_name="1" type="fixed" xyz="-0.007695 0.058449 0.13897" rpy="${pi/2} 0.0079495 0.1309" parent="left_gripper_base_link" axis="0 0 0" lower="0" upper="0"/>
+  <xacro:left_gripper_finger_link finger_name="c" link_name="2" type="revolute" xyz="0.011219 0.021604 0.014288" rpy="${pi} -${pi/2} ${pi}" parent="left_gripper_finger_link_c_1" axis="0 0 -1" lower="0" upper="1.4801"/>
+  <xacro:left_gripper_finger_link finger_name="c" link_name="3" type="revolute" xyz="-0.03278 0.046815 -0.0007872" rpy="0 0 -0.05236" parent="left_gripper_finger_link_c_2" axis="0 0 -1" lower="0" upper="1.2322"/>
+  <xacro:left_gripper_finger_link finger_name="c" link_name="4" type="revolute" xyz="-0.021853 0.03121 1.28E-05" rpy="0 0 0.05236" parent="left_gripper_finger_link_c_3" axis="0 0 -1" lower="-1.27" upper="0.6757"/>
+  </robot>

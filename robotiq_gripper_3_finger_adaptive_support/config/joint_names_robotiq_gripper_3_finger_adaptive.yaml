@@ -1,0 +1,1 @@
+controller_joint_names: ['gripper_finger_a_joint_1', 'gripper_finger_a_joint_2', 'gripper_finger_a_joint_3', 'gripper_finger_a_joint_4', 'gripper_finger_b_joint_1', 'gripper_finger_b_joint_2', 'gripper_finger_b_joint_3', 'gripper_finger_b_joint_4', 'gripper_finger_c_joint_2', 'gripper_finger_c_joint_3', 'gripper_finger_c_joint_4', ]
