@@ -1,10 +1,15 @@
 <launch>
+  <arg
+    name="model" />
+  <arg
+    name="gui"
+    default="False" />
   <param
     name="robot_description"
-    textfile="$(find motoman_sda20d_support)/urdf/motoman_sda20d.urdf"/>
+    textfile="$(find motoman_sda20d_support)/urdf/motoman_sda20d.urdf" />
   <param
     name="use_gui"
-    value="false" />
+    value="$(arg gui)" />
   <node
     name="joint_state_publisher"
     pkg="joint_state_publisher"
@@ -13,5 +18,9 @@
     name="robot_state_publisher"
     pkg="robot_state_publisher"
     type="state_publisher" />
-  <node	name="rviz" pkg="rviz" type="rviz" args="-d $(find motoman_sda20d_support)/urdf.rviz"	/>
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find motoman_sda20d_support)/urdf.rviz" />
 </launch>
